@@ -1,4 +1,4 @@
-rankhospital <- function(state,outcome,num) {
+rankhospital <- function(state,outcome,num="best") {
   x <- read.csv("outcome-of-care-measures.csv",colClasses="character",na.strings="Not Available")
   st <- x[x$State == state,]
   if (nrow(st) == 0) stop("invalid state")
